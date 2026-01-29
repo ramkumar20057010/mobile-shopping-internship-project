@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexiBuy</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style424.css')}}">
+</head>
+
+<body>
+    <header class="head">
+        <nav class="nav">
+            <div class="navhead">
+                <img src="{{url_for('static',filename='web/moblogo (1).png')}}" alt="loading...">
+            </div>
+            <ul class="navbar">
+                <li><a href="/">Home</a></li>
+                {%if "email" in session:%}
+                <li><a href="/logout">Logout</a></li>
+                {%else%}
+                <li><a href="/login">Login</a></li>
+                {%endif%}
+            </ul>
+        </nav>
+    </header>
+    <section class="info">
+        <div class="users">
+            <h3>No. of Users</h3>
+            <h1>{{no}}</h1>
+        </div>
+        <div class="mobiles">
+            <h3>No. of Mobiles</h3>
+            <h1>{{no_m}}</h1>
+        </div>
+        <div class="sold">
+            <h3>No. of Mobiles Sold</h3>
+            <h1>{{no_s}}</h1>
+        </div>
+    </section>
+    <section class="secadmin">
+        <center>
+            <div class="addmob"><a href="/admin_dashboard/add_mobiles">Add Mobile</a></div>
+
+            <div class="managemobiles">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Mobile</th>
+                            <th>Mobile Name</th>
+                            <th>Mobile Model</th>
+                            <th>Price</th>
+                            <th>No. of Items:</th>
+                            <th>Action</th>
+                        </tr>
+                        {%for i in rows:%}
+                        <tr>
+                            <td><img src="{{i[5]}}" alt="loading.."></td>
+                            <td>{{i[1]}}</td>
+                            <td>{{i[2]}}</td>
+                            <td>{{i[4]}}</td>
+                            <td>{{i[3]}}</td>
+                            <td>
+                                <form action="/admin_dashboard/edit_mobiles" method="GET">
+                                    <input type="text" value="{{i[0]}}" name="id" hidden>
+                                    <button type="submit" name="edit" value="edited" class="editbutton">Edit</button>
+                                </form>
+                                <form action="/admin_dashboard/delete_mobiles" method="GET">
+                                    <input type="text" value="{{i[0]}}" name="id" hidden>
+                                    <button type="submit" name="rem" value="removed"
+                                        class="removebutton">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                        {%endfor%}
+                    </tbody>
+                </table>
+            </div>
+        </center>
+    </section>
+
+    <footer class="foot">
+        <div class="foot1">
+            <div class="mobfoot">
+                <img src="{{url_for('static',filename='web/moblogo (1).png')}}">
+                <p>Your trusted partner for premium mobile phones.<br>
+                    We bring you the best mobile phones from leading <br>
+                    manufacturers with unmatched customer support</p>
+
+            </div>
+            <div class="contact">
+                <h3>Contact Info</h3>
+                <li><mark>Location:</mark> 123, North street, Mumbai</li>
+                <li><mark>Mobile No:</mark> +91 63795 - 45879</li>
+                <li><mark>Email:</mark> info@nexibuy.com</li>
+            </div>
+            <div class="about">
+                <h3>About Us</h3>
+                <p>We're an optimistic and gratitude-filled group of remote <br>
+                    workers scattered around the world and dedicated to creating<br>
+                     a product our customers will use and love. Read on to learn<br>
+                      more about NEXBUY's story and history and see the full Buffer team.</p>
+            </div>
+        </div>
+        <div class="rights">
+            <h2>Copyright ©2025 NexiBuy | Privacy | Terms | Security</h2>
+        </div>
+    </footer>
+</body>
+
+</html>

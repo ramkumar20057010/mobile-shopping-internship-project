@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexiBuy</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style424.css')}}">
+</head>
+
+<body>
+    <header class="head">
+        <nav class="nav">
+            <div class="navhead">
+                <img src="{{url_for('static',filename='web/moblogo (1).png')}}" alt="loading...">
+            </div>
+            <ul class="navbar">
+                <li><a href="/">Home</a></li>
+                <li><a href="/cart">Cart</a></li>
+                <li><a href="/history">Purchase History</a></li>
+                {% if email:%}
+                <li><a href="/logout">Logout</a></li>
+                {%else%}
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+                {%endif%}
+            </ul>
+        </nav>
+    </header>
+    <section class="sechome">
+        <h1>PURCHASE YOUR DESIRED MOBILES</h1>
+        <div class="pdts">
+            {%for i in rows:%}
+            <div class="pdt1">
+                <center><img src="{{i[5]}}" alt="loading.."></center>
+                <h3>{{i[2]}}</h3>
+                <h3>₹{{i[4]}}</h3>
+                {%if "email" not in session:%}
+                <center><button class="adcart" onclick="location.href='/login'">Add to Cart</button>
+                </center>
+                {%else%}
+                <form action="/cart" method="GET">
+                    <input type="text" value="{{session['u_id']}}" name="uid" hidden>
+                    <input type="text" value="{{i[0]}}" name="pid" hidden>
+                    <input type="text" value="{{i[4]}}" name="price" hidden>
+                    <label>No. Of Items</label>
+                    <input type="number" name="noitems" min="1" max="{{i[3]}}" required>
+                    <center><button type="submit" name="cart" value="cartpdt" class="adcart">Add to Cart</button>
+                    </center>
+                </form>
+                {%endif%}
+            </div>
+            {%endfor%}
+        </div>
+    </section>
+    <footer class="foot">
+        <div class="foot1">
+            <div class="mobfoot">
+                <img src="{{url_for('static',filename='web/moblogo (1).png')}}">
+                <p>Your trusted partner for premium mobile phones.<br>
+                    We bring you the best mobile phones from leading <br>
+                    manufacturers with unmatched customer support</p>
+
+            </div>
+            <div class="contact">
+                <h3>Contact Info</h3>
+                <li><mark>Location:</mark> 123, North street, Mumbai</li>
+                <li><mark>Mobile No:</mark> +91 63795 - 45879</li>
+                <li><mark>Email:</mark> info@nexibuy.com</li>
+            </div>
+            <div class="about">
+                <h3>About Us</h3>
+                <p>We're an optimistic and gratitude-filled group of remote <br>
+                    workers scattered around the world and dedicated to creating<br>
+                     a product our customers will use and love. Read on to learn<br>
+                      more about NEXBUY's story and history and see the full Buffer team.</p>
+            </div>
+        </div>
+        <div class="rights">
+            <h2>Copyright ©2025 NexiBuy | Privacy | Terms | Security</h2>
+        </div>
+    </footer>
+</body>
+
+</html>

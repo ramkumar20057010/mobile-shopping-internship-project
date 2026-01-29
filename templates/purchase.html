@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexiBuy</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style424.css')}}">
+</head>
+
+<body>
+    <header class="head">
+        <nav class="nav">
+            <div class="navhead">
+                <img src="{{url_for('static',filename='web/moblogo (1).png')}}" alt="loading...">
+            </div>
+            <ul class="navbar">
+                <li><a href="/">Home</a></li>
+                <li><a href="/cart">Cart</a></li>
+                <li><a href="/history">Purchase History</a></li>
+                {% if "email" in session:%}
+                    <li><a href="/logout">Logout</a></li>
+                {%else%}
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                {%endif%}
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="secpurchase">
+        {%if "email" not in session:%}
+        <center>
+            <div class="purchlog">
+                <img src="{{url_for('static',filename='web/purchaselogin.jpg')}}"><br>
+                <a href="/login">Please Login To Purchase Your Desired Products!</a>
+            </div>
+        </center>
+        {%else%}
+        <div class="purchase">
+            {%if rows==():%}
+            <center>
+                <div class="nopurchase">
+                    <h1>YOU HAVE NO PURCHASE HISTORY!</h1>
+                    <img src="{{url_for('static',filename='web/purchase.jpg')}}">
+                </div>
+            </center>
+            {%else%}
+            <center>
+                {%for i in rows:%}
+                <div class="pdtpurchase">
+                    <div class="pdt-purch-img">
+                        <img src="{{i[3]}}" 
+                        alt="loading..."></div>
+                    <div class="pdt-purch-details">
+                        <h3><u>Product-Name:</u> <mark>{{i[0]}}</mark></h3>
+                        <p><u>Product-ID:</u> <mark>{{i[1]}}</mark></p>
+                        <p><u>Purchased Date:</u> <mark>{{i[7]}}</mark></p>
+                        <p><u>No. of Items:</u> <mark>{{i[4]}}</mark></p>
+                        <p><u>Price:</u> <mark>₹{{i[2]}}</mark></p>
+                        <p><u>Total Price:</u> <mark>₹{{i[5]}}</mark></p>
+                    </div>  
+                </div>
+                {%endfor%}
+            </center>
+            {%endif%}
+            {%endif%}
+    </section>
+    <footer class="foot">
+        <div class="foot1">
+            <div class="mobfoot">
+                <img src="{{url_for('static',filename='web/moblogo (1).png')}}">
+                <p>Your trusted partner for premium mobile phones.<br>
+                    We bring you the best mobile phones from leading <br>
+                    manufacturers with unmatched customer support</p>
+
+            </div>
+            <div class="contact">
+                <h3>Contact Info</h3>
+                <li><mark>Location:</mark> 123, North street, Mumbai</li>
+                <li><mark>Mobile No:</mark> +91 63795 - 45879</li>
+                <li><mark>Email:</mark> info@nexibuy.com</li>
+            </div>
+            <div class="about">
+                <h3>About Us</h3>
+                <p>We're an optimistic and gratitude-filled group of remote <br>
+                    workers scattered around the world and dedicated to creating<br>
+                     a product our customers will use and love. Read on to learn<br>
+                      more about NEXBUY's story and history and see the full Buffer team.</p>
+            </div>
+        </div>
+        <div class="rights">
+            <h2>Copyright ©2025 NexiBuy | Privacy | Terms | Security</h2>
+        </div>
+    </footer>
+</body>
+
+</html>

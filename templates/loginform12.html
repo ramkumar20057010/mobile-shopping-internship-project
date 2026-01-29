@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexiBuy</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style424.css')}}">
+</head>
+
+<body>
+    <header class="head">
+        <nav class="nav">
+            <div class="navhead">
+                <img src="{{url_for('static',filename='web/moblogo (1).png')}}" alt="loading...">
+            </div>
+            <ul class="navbar">
+                <li><a href="/">Home</a></li>
+                <li><a href="/cart">Cart</a></li>
+                <li><a href="/history">Purchase History</a></li>
+                {%if email: %}
+                    <li><a href="/logout">Logout</a></li>
+                {%else%}
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                {%endif%}
+            </ul>
+        </nav>
+    </header>
+
+    <section class="seclog">
+        <div class="log">
+            <center>
+                <div class="logform">
+                    <h1>LOG-IN</h1>
+                    <form action="" method="GET">
+                        <input type="email" name="mail" placeholder="Enter your registered E-mail:" required><br><br>
+                        <input type="password" name="pass" placeholder="Enter your Password:" required><br><br>
+                        <button type="submit" name="log" value="logged">Log-in</button><br><br>{{err}}
+                    </form>
+                    <p>Don't have an account? Please <a href="/register">Register!</a></p>
+                </div>
+            </center>
+        </div>
+
+    </section>
+
+    <footer class="foot">
+        <div class="foot1">
+            <div class="mobfoot">
+                <img src="{{url_for('static',filename='web/moblogo (1).png')}}">
+                
+                <p>Your trusted partner for premium mobile phones.<br>
+                    We bring you the best mobile phones from leading <br>
+                    manufacturers with unmatched customer support</p>
+
+            </div>
+            <div class="contact">
+                <h3>Contact Info</h3>
+                <li><mark>Location:</mark> 123, North street, Mumbai</li>
+                <li><mark>Mobile No:</mark> +91 63795 - 45879</li>
+                <li><mark>Email:</mark> info@nexibuy.com</li>
+            </div>
+            <div class="about">
+                <h3>About Us</h3>
+                <p>We're an optimistic and gratitude-filled group of remote <br>
+                    workers scattered around the world and dedicated to creating<br>
+                     a product our customers will use and love. Read on to learn<br>
+                      more about NEXBUY's story and history and see the full Buffer team.</p>
+            </div>
+        </div>
+        <div class="rights">
+            <h2>Copyright ©2025 NexiBuy | Privacy | Terms | Security</h2>
+        </div>
+    </footer>
+</body>
+
+</html>

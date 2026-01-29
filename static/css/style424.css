@@ -1,0 +1,643 @@
+.head {
+    background: rgb(23, 173, 253);
+    width: auto;
+    height: 80px;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    width: auto;
+    display: grid;
+    grid-template-columns: 300px auto;
+}
+
+.navhead {
+    width: 300px;
+    height: 80px;
+    display: flex;
+}
+
+.navhead h1 {
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navhead img {
+    width: 200px;
+    height: 200px;
+    margin-top: -50px;
+}
+
+.navbar {
+    width: auto;
+    height: 80px;
+    display: flex;
+    justify-content: end;
+}
+
+.navbar li {
+    padding: 16px;
+}
+
+.navbar li, .navbar a {
+    font-size: 22px;
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.navbar li, .navbar a:hover {
+    color: black;
+    transition: 0.5s;
+}
+.foot {
+    background: rgb(23, 173, 253);
+    color: white;
+    width: auto;
+    height: 250px;
+    padding: 20px;
+}
+.foot1{
+    width: auto;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+.contact {
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+    text-decoration: none;
+}
+.about{
+    height: 100px;
+    padding: 10px;
+    text-decoration: none;
+}
+.mobfoot {
+    width: 500px;
+    height: 100px;
+    padding: 10px;
+
+}
+.mobfoot img{
+    width: 200px;
+    object-fit: cover;
+    height: 100px;
+    margin-top: -25px;
+}
+.rights{
+    margin-top: 60px;
+    padding: 10px;
+    width: auto;
+    height: 100px;
+    text-align: center;
+    align-content: center;
+}
+.contact li{
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.contact mark {
+    text-decoration: underline;
+    color: white;
+    background: transparent;
+}
+
+.secreg {
+    min-height: 550px;
+    width: auto;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+}
+
+.reg {
+    margin-top: 40px;
+    height: 450px;
+    width: 600px;
+    background: white;
+    box-shadow: 10px 10px 10px lightgrey;
+    border-radius: 10%;
+}
+
+.regform h1 {
+    color: rgb(23, 173, 253);
+    text-align: center;
+}
+
+.regform {
+    margin-top: 50px;
+    height: auto;
+    width: auto;
+}
+
+.regform input {
+    margin-left: 220px;
+    margin-right: 10px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid skyblue;
+}
+
+.regform form {
+    margin-top: 40px;
+}
+
+.age {
+    width: 160px;
+}
+
+.regform mark {
+    background: transparent;
+    color: rgb(23, 173, 253);
+    text-decoration: underline;
+}
+
+.regform button {
+    margin-left: 220px;
+    margin-right: 10px;
+    border: none;
+    color: white;
+    background: rgb(23, 173, 253);
+    width: 200px;
+    height: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.regform a {
+    text-decoration: none;
+    color: rgb(23, 173, 253);
+
+}
+
+.seclog {
+    width: auto;
+    min-height: 550px;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+}
+
+.log {
+    margin-top: 40px;
+    width: 500px;
+    align-content: center;
+    height: 450px;
+    background: white;
+    box-shadow: 10px 10px 10px lightgrey;
+    border-radius: 20px;
+
+}
+
+.logform {
+    width: auto;
+    height: auto;
+    margin-top: 20px;
+}
+
+.logform input {
+    width: 200px;
+    border: none;
+    border-bottom: 2px solid skyblue;
+    padding: 10px;
+    outline: none;
+}
+
+.logform h1 , .logform a{
+    color: rgb(23, 173, 253);
+}
+.logform button {
+    margin-top: 20px;
+    width: 200px;
+    color: white;
+    border-radius: 20px;
+    height: 30px;
+    border: none;
+    background: rgb(23, 173, 253);
+    cursor: pointer;
+}
+
+.secpurchase {
+    width: auto;
+    min-height: 600px;
+    background: white;
+}
+.purchlog{
+    width: auto;
+    min-height: 650px;
+    padding: 20px;
+}
+.purchlog img{
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+}
+.purchlog a{
+    margin-top: 50px;
+    background: rgb(23, 173, 253);
+    padding: 25px;
+    font-size: 16pt;
+    width: 600px;
+    height: 50px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+}
+.purchase {
+    margin-top: 50px;
+    width: auto;
+    min-height: 600px;
+    background: white;
+}
+
+.nopurchase {
+    width: auto;
+    height: auto;
+}
+
+.nopurchase img {
+    width: 600px;
+    height: 500px;
+}
+
+.nopurchase h1 {
+    color: rgb(23, 173, 253);
+}
+
+.pdtpurchase {
+    padding: 20px;
+    width: 700px;
+    height: 220px;
+    display: flex;
+    background: rgb(191, 231, 246);
+    box-shadow: 10px 10px 10px lightgrey;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    border-left: 5px solid skyblue;
+
+}
+
+.pdt-purch-img {
+    width: 300px;
+    height: 200px;
+    border-right: 1px solid skyblue;
+}
+
+.pdt-purch-img img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.pdt-purch-details {
+    text-align: left;
+    width: 400px;
+    height: 200px;
+    margin-left: 20px;
+}
+
+.pdt-purch-details p,
+.pdt-purch-details h3 {
+    color: rgb(23, 173, 253);
+}
+
+.pdt-purch-details mark {
+    background: transparent;
+    color: black;
+}
+
+.seccart {
+    width: auto;
+    min-height: 500px;
+}
+.cartlog{
+    width: auto;
+    min-height: 650px;
+    padding: 20px;
+}
+.cartlog img{
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+}
+.cartlog a{
+    margin-top: 50px;
+    background: rgb(23, 173, 253);
+    padding: 25px;
+    font-size: 16pt;
+    width: 600px;
+    height: 50px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+.cart {
+    width: auto;
+    min-height: 580px;
+    background: white;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.nocart {
+    width: 600px;
+    height: 500px;
+}
+
+.nocart h1 {
+    color: rgb(23, 173, 253);
+}
+
+.nocart img {
+    width: 500px;
+    height: 500px;
+}
+
+.cartpdt {
+    width: 800px;
+    height: 260px;
+    display: flex;
+    border-left: 4px solid skyblue;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px lightgrey;
+    margin-bottom: 20px;
+}
+
+.cartpdtimg {
+    width: 350px;
+    height: 240px;
+    padding: 10px;
+    border-right: 1px solid skyblue;
+
+}
+
+.cartpdtimg img {
+    width: 300px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.cartpdtdetails {
+    width: 450px;
+    height: 250px;
+    margin-top: -20px;
+    text-align: left;
+    padding: 10px;
+    margin-left: 30px;
+}
+
+.cartpdtdetails u {
+    color: rgb(23, 173, 253);
+}
+
+.cartpdtdetails input {
+    margin-left: 5px;
+    border: 1.5px solid skyblue;
+    border-radius: 5px;
+    outline: none;
+}
+
+.check {
+    background: rgb(23, 173, 253);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 100px;
+    height: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.remove {
+    background: orange;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 100px;
+    cursor: pointer;
+    height: 20px;
+}
+.sechome{
+    width: auto;
+    min-height: 500px;
+    padding: 10px;
+    margin-bottom: 60px;
+}
+.sechome h1{
+    color: rgb(23, 173, 253);
+    text-decoration: underline;
+    text-align: center;
+    
+}
+.pdts{
+    width: auto;
+    display: grid;
+    grid-template-columns:repeat(auto-fit,300px);
+    justify-content: center;
+    gap: 40px;
+    min-height: 500px;
+}
+.pdt1{
+    padding: 10px;
+    width: 300px;
+    height: 470px;
+    background: #f2f2f2;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.pdt1 h3, .pdt1 p{
+    margin-left: 20px;
+}
+.pdt1 img{
+    width: 200px;
+    height: 300px;
+    border-radius: 20px;
+    
+}
+.pdt1 img:hover{
+    transition: 0.25s;
+    scale: 1.08;
+}
+.pdt1 input{
+    padding: 5px;
+    width: 30px;
+    height: 10px;
+    background: transparent;
+    border: 1px solid rgb(23, 173, 253);
+    outline: none;
+    margin-bottom: 10px;
+
+}
+.adcart{
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+}
+.adcart:hover{
+    background: rgb(1, 155, 1);
+}
+.info{
+    margin-top: 50px;
+    width: auto;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+.users, .mobiles, .sold {
+    margin-left: 60px;
+    width: 200px;
+    height: 120px;
+    border: 2px solid rgb(23, 173, 253);
+    border-radius: 20px; 
+    text-align: center;
+}
+.users h3, .mobiles h3, .sold h3{
+    color: rgb(23, 173, 253);
+}
+.secadmin{
+    width: auto;
+    min-height: 500px;
+}
+.addmob{
+    
+    background: rgb(23, 173, 253);
+    width: 200px;
+    height: 40px;
+    justify-content: end;
+    border-radius: 30px;
+    align-content: center;
+}
+.addmob a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+.managemobiles{
+    width: auto;
+    min-height: 500px;
+}
+.managemobiles table{
+    padding: 20px;
+}
+.managemobiles td , .managemobiles th{
+
+    background: white;
+    border: 1px solid grey;
+    border-collapse:collapse;
+    padding: 20px;
+}
+.managemobiles img{
+    width: 100px;
+    height: 150px;
+
+}
+.actbutton{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+.editbutton{
+    background: rgb(23, 173, 253);
+    color: white;
+    width: 50px;
+    margin-bottom: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+.removebutton{
+    cursor: pointer;
+    background: orange;
+    color: white;
+    width: 50px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+}
+.secadd{
+    width: auto;
+    min-height: 700px;
+}
+.addmobform{
+    margin-left: 100px;
+    margin-top: 40px;
+    width: auto;
+    height: 600px;
+
+}
+.addmobform h1{
+    color: rgb(23, 173, 253);
+    text-align: center;
+}
+.addmobform label{
+    font-size: larger;
+    color: rgb(23, 173, 253);
+}
+.addmobform input{
+    padding: 10px;
+    outline: none;
+}
+.addmobform button{
+    border: none;
+    color: white;
+    background: rgb(23, 173, 253);
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.secupdate{
+    width: auto;
+    min-height: 900px;
+}
+.updatemobform{
+    margin-left: 100px;
+    margin-top: 40px;
+    width: auto;
+    height: 800px;
+
+}
+.updatemobform h1{
+    color: rgb(23, 173, 253);
+    text-align: center;
+}
+.updatemobform label{
+    font-size: larger;
+    color: rgb(23, 173, 253);
+}
+.updateform input{
+    padding: 10px;
+    outline: none;
+}
+.updatemobform button{
+    border: none;
+    color: white;
+    background: rgb(23, 173, 253);
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.updatemobform img{
+    width: 400px;
+    height: 300px;
+}

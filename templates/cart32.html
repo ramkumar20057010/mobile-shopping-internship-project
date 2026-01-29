@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexiBuy</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style424.css')}}">
+</head>
+
+<body>
+    <header class="head">
+        <nav class="nav">
+            <div class="navhead">
+                <img src="{{url_for('static',filename='web/moblogo (1).png')}}" alt="loading...">
+            </div>
+            <ul class="navbar">
+                <li><a href="/">Home</a></li>
+                <li><a href="/cart">Cart</a></li>
+                <li><a href="/history">Purchase History</a></li>
+                {%if "email" in session%}
+                <li><a href="/logout">Logout</a></li>
+                {%else%}
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+                {%endif%}
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="seccart">
+        {%if "email" not in session:%}
+        <center>
+            <div class="cartlog">
+                <img src="{{url_for('static',filename='web/cartlogin.jpg')}}"><br>
+                <a href="/login">Please Login To Purchase Your Desired Products!</a>
+            </div>
+        </center>
+        {%else%}
+        <div class="cart">
+            {%if rows==():%}
+            <center>
+                <div class="nocart">
+                    <h1>YOUR CART IS EMPTY!</h1>
+                    <img src="{{url_for('static',filename='web/cart.jpg')}}" alt="loading...">
+                </div>
+            </center>
+            {%else%}
+            {%for i in rows:%}
+            <center>
+                <div class="cartpdt">
+                    <div class="cartpdtimg"><img src="{{i[2]}}"></div>
+                    <div class="cartpdtdetails">
+                        <h2><u>Product-Name:</u>{{i[0]}}</h2>
+                        <p><u>Price:</u> ₹{{i[1]}}</p>
+                            <p><u>No. of Items:</u>{{i[3]}}</p>
+                            <p on><u>Total Price: </u>₹{{i[4]}}</p>
+                            <form action="/history" method="GET">
+                            <input type="text" name="tid" value="{{i[6]}}" hidden>
+                            <button type="submit" name="check" value="checked" class="check">Check-Out</button><br>
+                        </form>
+                        <form action="/cart" method="GET">
+                            <input type="text" name="tid" value="{{i[6]}}" hidden>
+                            <button type="submit" name="remove" value="removed" class="remove">Remove</button>
+                        </form>
+                    </div>
+                </div>
+            </center>
+            {%endfor%}
+            {%endif%}
+        </div>
+        {%endif%}
+    </section>
+    <footer class="foot">
+        <div class="foot1">
+            <div class="mobfoot">
+                <img src="{{url_for('static',filename='web/moblogo (1).png')}}">
+                
+                <p>Your trusted partner for premium mobile phones.<br>
+                    We bring you the best mobile phones from leading <br>
+                    manufacturers with unmatched customer support</p>
+
+            </div>
+            <div class="contact">
+                <h3>Contact Info</h3>
+                <li><mark>Location:</mark> 123, North street, Mumbai</li>
+                <li><mark>Mobile No:</mark> +91 63795 - 45879</li>
+                <li><mark>Email:</mark> info@nexibuy.com</li>
+            </div>
+            <div class="about">
+                <h3>About Us</h3>
+                <p>We're an optimistic and gratitude-filled group of remote <br>
+                    workers scattered around the world and dedicated to creating<br>
+                     a product our customers will use and love. Read on to learn<br>
+                      more about NEXBUY's story and history and see the full Buffer team.</p>
+            </div>
+        </div>
+        <div class="rights">
+            <h2>Copyright ©2025 NexiBuy | Privacy | Terms | Security</h2>
+        </div>
+    </footer>
+</body>
+
+</html>
