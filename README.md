@@ -21,3 +21,5 @@ This project was developed as part of my internship.
 2. Create virtual environment
 3. Install dependencies
 4. Run app.py
+## Note
+This project is developed for academic purposes and runs locally using Flask
