@@ -70,3 +70,26 @@ Developed as part of my internship to demonstrate full-stack web development ski
 ![Admin](screenshots/admin.png)
 
 ---
+
+## ⚙️ How to Run Locally
+
+1. Install Python (3.x)
+2. Install required packages:
+3. Configure MySQL database and update database credentials in the project.
+4. Run the Flask application:
+5. Open browser and go to: http://127.0.0.1:5000/
+
+---
+
+## 📂 Project Type
+
+Academic Internship Project  
+
+---
+
+## 📌 Note
+
+This project was developed for academic purposes and runs locally using Flask and MySQL.  
+It demonstrates full-stack development concepts including authentication, CRUD operations, and database integration.
+
+---
